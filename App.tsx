@@ -9,6 +9,9 @@ import React from 'react';
 import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import WebView from 'react-native-webview';
+import Animated from 'react-native-reanimated';
+
+const AnimatedWebView = Animated.createAnimatedComponent(WebView);
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,7 +27,7 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <WebView
+      <AnimatedWebView
         source={{uri: 'https://docs.swmansion.com/react-native-reanimated/'}}
       />
     </SafeAreaView>
