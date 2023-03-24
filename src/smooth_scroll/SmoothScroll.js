@@ -83,7 +83,7 @@ const INNER_BALL_SIZE =
 const DEFAULT_COVER_URI =
   'https://e7.pngegg.com/pngimages/950/513/png-clipart-eighth-note-musical-note-stem-notes-music-download-graphic-arts.png';
 
-function ScrollExample() {
+function SmoothScroll() {
   const position = useSharedValue(0);
   const animatedRef = useAnimatedRef();
 
@@ -276,4 +276,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ScrollExample;
+export default SmoothScroll;
