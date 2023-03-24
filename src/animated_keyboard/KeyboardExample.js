@@ -1,9 +1,19 @@
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {TextInput} from 'react-native';
+import {StatusBar, TextInput} from 'react-native';
 import {useAnimatedKeyboard} from 'react-native-reanimated';
+import {useEffect} from 'react';
 
 export const KeyboardExample = () => {
   const {state} = useAnimatedKeyboard({isStatusBarTranslucentAndroid: true});
+
+  // ─── Workaround For Broken Status Bar ────────────────────────────────
+  // useEffect(() => {
+  //   return () => {
+  //     StatusBar.setBarStyle('light-content');
+  //     StatusBar.setTranslucent(true);
+  //     StatusBar.setBackgroundColor('transparent');
+  //   };
+  // });
 
   return (
     <SafeAreaView
