@@ -7,12 +7,23 @@
 
 import React from 'react';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import ScrollExample from './scroll_events/ScrollEvents';
+import {StatusBar} from 'react-native';
+import ScrollExample from './src/scroll_events/ScrollEvents';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 
 function App(): JSX.Element {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
-      <ScrollExample />
+      <SafeAreaProvider>
+        <SafeAreaView>
+          <StatusBar
+            translucent
+            backgroundColor="transparent"
+            barStyle="dark-content"
+          />
+          <ScrollExample />
+        </SafeAreaView>
+      </SafeAreaProvider>
     </GestureHandlerRootView>
   );
 }
