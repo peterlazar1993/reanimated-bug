@@ -6,9 +6,9 @@ import {Home} from './Home';
 import {KeyboardExample} from './animated_keyboard/KeyboardExample';
 import SmoothScroll from './smooth_scroll/SmoothScroll';
 import {createStackNavigator} from '@react-navigation/stack';
-import { GestureHandler } from './gesture_handler/GestureHandler';
+import {GestureHandler} from './gesture_handler/GestureHandler';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export function Router() {
   return (
