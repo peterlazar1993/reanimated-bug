@@ -2,6 +2,11 @@ package com.bug;
 
 import android.os.Bundle;
 
+
+import android.os.Build; // Added
+import android.view.Window; // Added
+import android.view.WindowManager; // Added
+
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
@@ -11,6 +16,9 @@ public class MainActivity extends ReactActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    Window w = getWindow();
+    w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
     super.onCreate(null);
   }
 

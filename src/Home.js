@@ -1,7 +1,6 @@
 import React from 'react';
+import {Text, View} from 'react-native';
 import {RectButton, ScrollView} from 'react-native-gesture-handler';
-import {View, Text} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const Home = ({navigation}) => {
   const onPress = route => {
@@ -9,28 +8,26 @@ export const Home = ({navigation}) => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <ScrollView
-        contentContainerStyle={{
-          rowGap: 16,
-          padding: 16,
-          justifyContent: 'center',
-          flexGrow: 1,
-        }}>
-        <ListItem
-          onPress={() => {
-            onPress('Smooth Scroll');
-          }}
-          title="Smooth Scroll Bug"
-        />
-        <ListItem
-          onPress={() => {
-            onPress('Animted Keyboard');
-          }}
-          title="useAnimatedKeyboard Bug"
-        />
-      </ScrollView>
-    </SafeAreaView>
+    <ScrollView
+      contentContainerStyle={{
+        rowGap: 16,
+        padding: 16,
+        justifyContent: 'center',
+        flexGrow: 1,
+      }}>
+      <ListItem
+        onPress={() => {
+          onPress('Smooth Scroll');
+        }}
+        title="Smooth Scroll Bug"
+      />
+      <ListItem
+        onPress={() => {
+          onPress('Animted Keyboard');
+        }}
+        title="useAnimatedKeyboard Bug"
+      />
+    </ScrollView>
   );
 };
 

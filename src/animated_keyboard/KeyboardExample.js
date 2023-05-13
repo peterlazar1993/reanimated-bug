@@ -1,7 +1,5 @@
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {StatusBar, TextInput} from 'react-native';
+import {TextInput, View} from 'react-native';
 import {useAnimatedKeyboard} from 'react-native-reanimated';
-import {useEffect} from 'react';
 
 export const KeyboardExample = () => {
   const {state} = useAnimatedKeyboard({isStatusBarTranslucentAndroid: true});
@@ -16,7 +14,7 @@ export const KeyboardExample = () => {
   // });
 
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
         justifyContent: 'center',
@@ -34,6 +32,6 @@ export const KeyboardExample = () => {
           borderColor: 'lightcoral',
         }}
       />
-    </SafeAreaView>
+    </View>
   );
 };
