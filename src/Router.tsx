@@ -6,6 +6,7 @@ import {Home} from './Home';
 import {KeyboardExample} from './animated_keyboard/KeyboardExample';
 import SmoothScroll from './smooth_scroll/SmoothScroll';
 import {createStackNavigator} from '@react-navigation/stack';
+import { GestureHandler } from './gesture_handler/GestureHandler';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,6 @@ export function Router() {
     <NavigationContainer theme={DarkTheme}>
       <Stack.Navigator
         screenOptions={{
-          title: null,
           headerTintColor: 'white',
           contentStyle: {backgroundColor: 'black'},
           headerStyle: {backgroundColor: 'lightcoral'},
@@ -33,6 +33,11 @@ export function Router() {
           name="Animted Keyboard"
           options={{title: 'Animated Keyboard'}}
           component={KeyboardExample}
+        />
+        <Stack.Screen
+          name="Gesture Handler"
+          options={{title: 'Gesture Handler'}}
+          component={GestureHandler}
         />
       </Stack.Navigator>
     </NavigationContainer>

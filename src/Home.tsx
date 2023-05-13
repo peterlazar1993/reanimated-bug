@@ -27,6 +27,12 @@ export const Home = ({navigation}) => {
         }}
         title="useAnimatedKeyboard Bug"
       />
+      <ListItem
+        onPress={() => {
+          onPress('Gesture Handler');
+        }}
+        title="gesture handler bug"
+      />
     </ScrollView>
   );
 };
